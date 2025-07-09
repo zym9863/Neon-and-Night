@@ -79,18 +79,6 @@
                 v-if="showUserMenu"
                 class="absolute right-0 mt-2 w-48 glass-effect rounded-lg shadow-lg py-1 border border-white/20"
               >
-                <NuxtLink
-                  to="/profile"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
-                >
-                  个人设置
-                </NuxtLink>
-                <NuxtLink
-                  to="/settings"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
-                >
-                  夜空配置
-                </NuxtLink>
                 <hr class="my-1 border-white/20">
                 <button
                   @click="handleSignOut"
@@ -214,18 +202,47 @@ watch(() => useRoute().path, () => {
 
 <style scoped>
 .nav-link {
-  @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 150ms;
+}
+.nav-link:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0.1);
 }
 
 .nav-link-active {
-  @apply text-neon-cyan bg-white/10;
+  color: #67e8f9;
+  background-color: rgba(255,255,255,0.1);
 }
 
 .mobile-nav-link {
-  @apply block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors;
+  display: block;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d1d5db;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 150ms;
+}
+.mobile-nav-link:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0.1);
 }
 
 .mobile-nav-link-active {
-  @apply text-neon-cyan bg-white/10;
+  color: #67e8f9;
+  background-color: rgba(255,255,255,0.1);
 }
 </style>
